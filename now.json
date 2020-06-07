@@ -1,7 +1,7 @@
 {
     "version": 2,
     "env": {
-        "GOOGLE_API_KEY": "AIzaSyDbOwe2dXLVkL9hBhREOWc-v0wa4E_bJqs"
+        "GOOGLE_API_KEY": "AIzaSyDguNhueoktOU3oDONfqkXm8Cms4pfilCo"
     },
     "builds": [
         { "src": "playlist-items.js", "use": "@now/node" },
