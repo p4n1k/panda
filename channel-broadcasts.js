@@ -16,7 +16,7 @@ module.exports = async function (req, res) {
         key: process.env.GOOGLE_API_KEY,
         part: 'snippet',
         channelId: id,
-        type: 'videos',
+        type: 'video',
         eventType: 'live',
         order: 'date',
         maxResults: perPage
@@ -56,7 +56,7 @@ module.exports = async function (req, res) {
                 key: process.env.GOOGLE_API_KEY,
                 part: 'snippet',
                 channelId: id,
-                type: 'videos',
+                type: 'video',
                 eventType: 'live',
                 order: 'date',
                 pageToken: pageToken
