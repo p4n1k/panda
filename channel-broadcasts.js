@@ -56,9 +56,9 @@ module.exports = async function (req, res) {
                 key: process.env.GOOGLE_API_KEY,
                 part: 'snippet',
                 channelId: id,
-                type: 'video',
-                eventType: 'live',
-                order: 'date',
+                //type: 'video',
+                //eventType: 'live',
+                //order: 'date',
                 pageToken: pageToken
             })
 
