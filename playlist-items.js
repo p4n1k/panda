@@ -16,7 +16,7 @@ module.exports = async function (req, res) {
         key: process.env.GOOGLE_API_KEY,
         part: 'snippet,contentDetails',
         playlistId: id,
-        maxResults: 50
+        maxResults: perPage
     }).catch(({ errors }) => {
 
         console.log('Error fetching playlist', errors)
@@ -53,7 +53,7 @@ module.exports = async function (req, res) {
                 key: process.env.GOOGLE_API_KEY,
                 part: 'snippet,contentDetails',
                 playlistId: id,
-                maxResults: 50,
+                maxResults: perPage,
                 pageToken: pageToken
             })
 
