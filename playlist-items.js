@@ -6,7 +6,7 @@ import { google } from 'googleapis'
 module.exports = async function (req, res) {
     // Break out the id param from our request's query string
     const { query: { id } } = url.parse(req.url, true)
-    const perPage = 20
+    const perPage = 50
 
     // Setup Youtube API V3 Service instance
     const service = google.youtube('v3')
@@ -16,7 +16,7 @@ module.exports = async function (req, res) {
         key: process.env.GOOGLE_API_KEY,
         part: 'snippet,contentDetails',
         playlistId: id,
-        maxResults: perPage
+        maxResults: 50
     }).catch(({ errors }) => {
 
         console.log('Error fetching playlist', errors)
@@ -53,7 +53,7 @@ module.exports = async function (req, res) {
                 key: process.env.GOOGLE_API_KEY,
                 part: 'snippet,contentDetails',
                 playlistId: id,
-                maxResults: perPage,
+                maxResults: 50,
                 pageToken: pageToken
             })
 
